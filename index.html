@@ -348,8 +348,14 @@
     <h2 class="section-title">¿Es tu primera vez en terapia?</h2>
     <p class="section-lead">Cuéntame un poco de ti. No necesitas tener todo claro, con lo que puedas escribir es suficiente.</p>
 
-    <!-- Reemplazar action="" con el endpoint real de Formspree (o servicio equivalente), ej: https://formspree.io/f/xxxxxxxx -->
-    <form class="contact-form" action="" method="POST">
+    <!-- Web3Forms: reemplaza el value de access_key por tu key real (la consigues gratis en https://web3forms.com) -->
+    <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+      <input type="hidden" name="access_key" value="1e2f6f35-79ff-4d63-a807-5a7cf0794298">
+      <input type="hidden" name="subject" value="Nuevo mensaje desde la web — Sara Bernal">
+      <input type="hidden" name="from_name" value="Formulario de contacto — sitio web">
+      <!-- Honeypot anti-spam: debe quedar oculto y vacío -->
+      <input type="checkbox" name="botcheck" class="honeypot" tabindex="-1" autocomplete="off">
+
       <div class="form-row">
         <div class="form-group">
           <label for="nombre">Nombre</label>
@@ -401,6 +407,7 @@
       </p>
 
       <button type="submit" class="btn btn--primary btn--lg btn--full">Enviar mensaje</button>
+      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
     </form>
   </section>
 

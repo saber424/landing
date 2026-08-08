@@ -68,22 +68,28 @@ Mientras no exista el archivo de imagen, el sitio muestra automáticamente un
 fondo de color de respaldo (no se rompe el diseño ni aparece un ícono de
 imagen rota).
 
-## Cambiar el endpoint del formulario de contacto
+## Conectar el formulario de contacto (Web3Forms)
 
 El formulario de la sección **Contacto** (`#contacto` en `index.html`) no
-tiene backend propio. Está pensado para conectarse a un servicio como
-[Formspree](https://formspree.io) u otro equivalente compatible con sitios
-estáticos.
+tiene backend propio. Está conectado a [Web3Forms](https://web3forms.com),
+un servicio gratuito que reenvía los envíos del formulario a tu correo sin
+necesidad de backend propio.
 
-1. Crea una cuenta y un formulario en Formspree (o el servicio que prefieras).
-2. Copia el endpoint que te entregan (ej. `https://formspree.io/f/xxxxxxxx`).
-3. En `index.html`, busca la etiqueta `<form class="contact-form" action="" method="POST">`
-   (hay un comentario justo arriba indicando este punto) y reemplaza el
-   `action=""` vacío por tu endpoint real:
+1. Ve a [web3forms.com](https://web3forms.com) e ingresa el correo donde
+   quieres recibir los mensajes. Te generan una **access key** gratis al
+   instante (llega por correo, sin necesidad de crear una cuenta).
+2. En `index.html`, busca el campo oculto `access_key` dentro del
+   `<form id="contactForm">` (sección Contacto) y reemplaza
+   `TU_ACCESS_KEY_AQUI` por tu key real:
 
    ```html
-   <form class="contact-form" action="https://formspree.io/f/xxxxxxxx" method="POST">
+   <input type="hidden" name="access_key" value="TU_ACCESS_KEY_AQUI">
    ```
+
+3. Listo. El formulario ya envía por AJAX (ver `js/main.js`, función
+   `initContactForm`): al enviar, muestra "Enviando...", y luego un mensaje
+   de éxito o error sin recargar la página. Incluye un campo `botcheck`
+   oculto como protección anti-spam (no lo elimines).
 
 ## Integrar un sistema de agendamiento real
 

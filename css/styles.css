@@ -883,6 +883,31 @@ em {
   margin: 0;
 }
 
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.form-status {
+  min-height: 1.2rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+}
+
+.form-status--success {
+  color: var(--sage);
+}
+
+.form-status--error {
+  color: var(--clay);
+}
+
 /* ============ Agenda ============ */
 
 .agenda__grid {

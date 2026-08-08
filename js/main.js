@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initMobileDrawer();
   initScrollSpy();
   initTimeSlots();
+  initContactForm();
   document.getElementById("footerYear").textContent = new Date().getFullYear();
 });
 
@@ -87,7 +88,45 @@ function initScrollSpy() {
   sections.forEach((section) => observer.observe(section));
 }
 
-/* ---------- 4. Selección de horario en Agenda (solo UI) ---------- */
+/* ---------- 4. Formulario de contacto (Web3Forms) ---------- */
+function initContactForm() {
+  const form = document.getElementById("contactForm");
+  const status = document.getElementById("formStatus");
+  if (!form || !status) return;
+
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+
+    const submitBtn = form.querySelector("button[type='submit']");
+    submitBtn.disabled = true;
+    status.textContent = "Enviando...";
+    status.className = "form-status";
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: new FormData(form),
+      });
+      const result = await response.json();
+
+      if (response.ok && result.success) {
+        status.textContent = "¡Listo! Tu mensaje fue enviado. Te responderé pronto.";
+        status.classList.add("form-status--success");
+        form.reset();
+      } else {
+        throw new Error(result.message || "No se pudo enviar el mensaje.");
+      }
+    } catch (error) {
+      status.textContent = "Hubo un problema al enviar tu mensaje. Intenta de nuevo o escríbeme directo por correo.";
+      status.classList.add("form-status--error");
+    } finally {
+      submitBtn.disabled = false;
+    }
+  });
+}
+
+/* ---------- 5. Selección de horario en Agenda (solo UI) ---------- */
 function initTimeSlots() {
   const grid = document.getElementById("timeGrid");
   const selectedLabel = document.getElementById("agendaSelected");
