@@ -427,6 +427,7 @@ em {
 .hero__img {
   width: 100%;
   aspect-ratio: 4 / 4.6;
+  max-height: 460px;
   object-fit: cover;
   border-radius: 24px 24px 24px 100px;
   background: var(--sage-light);
@@ -649,6 +650,7 @@ em {
 .sobre__img {
   width: 100%;
   aspect-ratio: 4 / 4.6;
+  max-height: 460px;
   object-fit: cover;
   border-radius: 100px 24px 24px 24px;
   background: var(--sage-light);
@@ -1220,6 +1222,10 @@ em {
     margin: 0 auto;
   }
 
+  .hero__img {
+    max-height: 340px;
+  }
+
   .sobre {
     grid-template-columns: 1fr;
   }
@@ -1227,6 +1233,10 @@ em {
   .sobre__media {
     max-width: 320px;
     margin: 0 auto;
+  }
+
+  .sobre__img {
+    max-height: 340px;
   }
 
   .bienestar {
