@@ -48,21 +48,23 @@ Luego visita `http://localhost:8000`.
 
 No se requiere ningún paso de build: el repositorio se sirve tal cual.
 
-## Reemplazar las imágenes placeholder
+## Reemplazar las imágenes de ambiente por fotos reales
 
-El sitio usa dos imágenes de referencia que debes reemplazar por fotos reales:
+El sitio usa dos imágenes de ambiente libres de derechos de autor (licencia
+CC0, ver detalle y créditos en `assets/README.md`) como relleno temporal.
+Reemplázalas por fotos reales de la psicóloga cuando estén disponibles:
 
 | Sección  | Ruta a reemplazar              | Dónde se usa en `index.html`        |
 |----------|---------------------------------|--------------------------------------|
-| Hero     | `assets/placeholder-hero.jpg`  | `<img>` dentro de `<section id="inicio">`, clase `hero__img` |
-| Sobre mí | `assets/placeholder-about.jpg` | `<img>` dentro de `<section id="sobre">`, clase `sobre__img` |
+| Hero     | `assets/hero-ambience.jpg`     | `<img>` dentro de `<section id="inicio">`, clase `hero__img` |
+| Sobre mí | `assets/sobre-ambience.jpg`    | `<img>` dentro de `<section id="sobre">`, clase `sobre__img` |
 
 Pasos:
 
 1. Coloca tus archivos de imagen en la carpeta `assets/` con esos mismos
    nombres (o cambia el atributo `src` en `index.html` si usas otro nombre).
-2. Actualiza también el atributo `alt` de cada `<img>` si el contenido de la
-   foto cambia sustancialmente, para mantener buena accesibilidad.
+2. Actualiza también el atributo `alt` de cada `<img>` para que describa la
+   foto real en vez de la imagen de ambiente, manteniendo buena accesibilidad.
 
 Mientras no exista el archivo de imagen, el sitio muestra automáticamente un
 fondo de color de respaldo (no se rompe el diseño ni aparece un ícono de
