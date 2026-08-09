@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-95TRTV0KR3"></script>
+<!--
+  Google tag (gtag.js) — carga condicionada al consentimiento de cookies.
+  El script de Google (gtag/js) y la llamada gtag('config', ...) solo se
+  disparan si el usuario acepta cookies analíticas (ver initCookieConsent
+  en js/main.js). Aquí solo se define el stub de dataLayer/gtag, que no
+  hace ninguna petición de red por sí solo.
+-->
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
-  gtag('config', 'G-95TRTV0KR3');
 </script>
+<script>window.GA_MEASUREMENT_ID = "G-95TRTV0KR3";</script>
 
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -411,6 +415,14 @@
         <span>Es mi primera vez en terapia</span>
       </label>
 
+      <label class="checkbox-row">
+        <input type="checkbox" name="acepta_tratamiento_datos" value="si" required>
+        <span>
+          He leído y autorizo el tratamiento de mis datos personales según la
+          <a href="privacidad.html" target="_blank" rel="noopener">Política de tratamiento de datos</a>.
+        </span>
+      </label>
+
       <p class="confidencialidad">
         🔒 Todo lo que compartas aquí es estrictamente confidencial y está protegido por el
         secreto profesional. Solo yo tengo acceso a esta información.
@@ -529,8 +541,27 @@
     Cédula profesional #000000 (placeholder — reemplazar por dato real).
     Toda la información compartida en este sitio y en sesión está protegida por el
     secreto profesional. © <span id="footerYear"></span> Sara Bernal. Todos los derechos reservados.
+    <br>
+    <a href="terminos.html">Términos y condiciones</a> ·
+    <a href="privacidad.html">Política de tratamiento de datos</a> ·
+    <button type="button" class="footer__cookie-link" id="openCookiePrefs">Preferencias de cookies</button>
   </p>
 </footer>
+
+<!-- ============ COOKIE CONSENT BANNER ============ -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Preferencias de cookies" hidden>
+  <div class="cookie-banner__text">
+    <p>
+      Usamos cookies analíticas (Google Analytics) para entender cómo se usa este sitio.
+      No activamos estas cookies hasta que las aceptes. Puedes leer más en nuestra
+      <a href="privacidad.html">Política de tratamiento de datos</a>.
+    </p>
+  </div>
+  <div class="cookie-banner__actions">
+    <button type="button" class="btn btn--outline btn--small" id="cookieReject">Rechazar</button>
+    <button type="button" class="btn btn--primary btn--small" id="cookieAccept">Aceptar cookies</button>
+  </div>
+</div>
 
 <script src="js/main.js"></script>
 </body>

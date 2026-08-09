@@ -9,16 +9,37 @@ para publicarse en GitHub Pages.
 > imágenes y el endpoint del formulario de contacto por los datos reales
 > antes de hacer público el sitio.
 
+> ⚠️ **Páginas legales (`terminos.html` y `privacidad.html`)**: son una
+> plantilla de referencia basada en la Ley 1581 de 2012 (Habeas Data,
+> Colombia), **no son asesoría legal**. Dado que el sitio recolecta datos
+> sensibles de salud mental (campo "motivo de consulta"), haz que un
+> abogado las revise antes de publicar el sitio.
+
 ## Estructura del proyecto
 
 ```
-/index.html         → toda la página (secciones: hero, áreas, tarifas, sobre mí,
-                       recursos, bienestar, contacto, agenda, testimonios, footer)
-/css/styles.css      → estilos (paleta, tipografía, layout, responsive)
-/js/main.js          → comportamiento (rotación del hero, scroll-spy, menú
-                       mobile, selector de horarios en Agenda)
-/assets/             → imágenes del sitio (placeholders por ahora)
+/index.html          → página principal (hero, áreas, tarifas, sobre mí,
+                        recursos, bienestar, contacto, agenda, testimonios, footer)
+/terminos.html        → Términos y Condiciones
+/privacidad.html       → Política de tratamiento de datos personales
+/css/styles.css       → estilos (paleta, tipografía, layout, responsive)
+/js/main.js           → comportamiento (rotación del hero, scroll-spy, menú
+                        mobile, selector de horarios en Agenda, consentimiento
+                        de cookies)
+/assets/              → imágenes del sitio
 ```
+
+## Google Analytics y consentimiento de cookies
+
+El sitio incluye Google Analytics (`gtag.js`), pero **no se activa hasta que
+el visitante acepta el banner de cookies** que aparece en la primera visita
+(ver `initCookieConsent` en `js/main.js`). Si el visitante rechaza o no ha
+respondido, no se hace ninguna petición a Google. La elección se guarda en
+`localStorage` y se puede cambiar en cualquier momento desde el enlace
+"Preferencias de cookies" en el pie de página.
+
+El formulario de contacto también incluye una casilla obligatoria de
+autorización de tratamiento de datos, enlazada a `privacidad.html`.
 
 ## Cómo probarlo localmente
 

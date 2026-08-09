@@ -9,7 +9,9 @@ document.addEventListener("DOMContentLoaded", () => {
   initScrollSpy();
   initTimeSlots();
   initContactForm();
-  document.getElementById("footerYear").textContent = new Date().getFullYear();
+  initCookieConsent();
+  const footerYear = document.getElementById("footerYear");
+  if (footerYear) footerYear.textContent = new Date().getFullYear();
 });
 
 /* ---------- 1. Rotación automática del headline del hero ---------- */
@@ -126,7 +128,52 @@ function initContactForm() {
   });
 }
 
-/* ---------- 5. Selección de horario en Agenda (solo UI) ---------- */
+/* ---------- 5. Consentimiento de cookies (Google Analytics) ---------- */
+function initCookieConsent() {
+  const STORAGE_KEY = "cookie_consent"; // "accepted" | "rejected"
+  const banner = document.getElementById("cookieBanner");
+  const acceptBtn = document.getElementById("cookieAccept");
+  const rejectBtn = document.getElementById("cookieReject");
+  const openPrefsBtn = document.getElementById("openCookiePrefs");
+  if (!banner || !acceptBtn || !rejectBtn) return;
+
+  const loadGoogleAnalytics = () => {
+    if (!window.GA_MEASUREMENT_ID || document.getElementById("ga-script")) return;
+    const script = document.createElement("script");
+    script.id = "ga-script";
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${window.GA_MEASUREMENT_ID}`;
+    document.head.appendChild(script);
+    gtag("config", window.GA_MEASUREMENT_ID);
+  };
+
+  const showBanner = () => banner.removeAttribute("hidden");
+  const hideBanner = () => banner.setAttribute("hidden", "");
+
+  const consent = localStorage.getItem(STORAGE_KEY);
+  if (consent === "accepted") {
+    loadGoogleAnalytics();
+  } else if (consent !== "rejected") {
+    showBanner();
+  }
+
+  acceptBtn.addEventListener("click", () => {
+    localStorage.setItem(STORAGE_KEY, "accepted");
+    loadGoogleAnalytics();
+    hideBanner();
+  });
+
+  rejectBtn.addEventListener("click", () => {
+    localStorage.setItem(STORAGE_KEY, "rejected");
+    hideBanner();
+  });
+
+  if (openPrefsBtn) {
+    openPrefsBtn.addEventListener("click", showBanner);
+  }
+}
+
+/* ---------- 6. Selección de horario en Agenda (solo UI) ---------- */
 function initTimeSlots() {
   const grid = document.getElementById("timeGrid");
   const selectedLabel = document.getElementById("agendaSelected");
