@@ -18,16 +18,42 @@ para publicarse en GitHub Pages.
 ## Estructura del proyecto
 
 ```
-/index.html          → página principal (hero, áreas, tarifas, sobre mí,
-                        recursos, bienestar, contacto, agenda, testimonios, footer)
-/terminos.html        → Términos y Condiciones
-/privacidad.html       → Política de tratamiento de datos personales
-/css/styles.css       → estilos (paleta, tipografía, layout, responsive)
-/js/main.js           → comportamiento (rotación del hero, scroll-spy, menú
-                        mobile, selector de horarios en Agenda, consentimiento
-                        de cookies)
-/assets/              → imágenes del sitio
+/index.html            → página principal (hero, áreas, tarifas, sobre mí,
+                          recursos, bienestar, contacto, agenda, testimonios, footer)
+/terminos.html          → Términos y Condiciones
+/privacidad.html        → Política de tratamiento de datos personales
+/css/styles.css         → estilos (paleta, tipografía, layout, responsive)
+/js/main.js             → comportamiento (rotación del hero, scroll-spy, menú
+                          mobile, selector de horarios en Agenda, consentimiento
+                          de cookies)
+/assets/                → imágenes del sitio
+/assets/icons/          → favicon e íconos de la marca (ver sección SEO abajo)
+/favicon.ico            → favicon multi-resolución (16/32/48/256 px)
+/site.webmanifest       → manifest para "agregar a inicio" en móvil
+/robots.txt             → reglas para rastreadores
+/sitemap.xml            → mapa del sitio para Google Search Console
 ```
+
+## SEO y favicon
+
+- **Ícono de marca**: `assets/icons/logo-mark.svg` — una hoja (crecimiento/
+  bienestar) dentro de una silueta de cabeza de perfil (mente/psicología),
+  en la paleta del sitio. Es el archivo fuente; todos los demás tamaños
+  (`favicon.ico`, `favicon-16x16.png`, `favicon-32x32.png`,
+  `apple-touch-icon.png`, `android-chrome-*.png`) se generaron a partir de
+  él. Si cambias el ícono, regenera estos archivos con la misma fuente.
+- **`robots.txt`** permite el rastreo de todo el sitio. `terminos.html` y
+  `privacidad.html` no se bloquean ahí a propósito — llevan
+  `<meta name="robots" content="noindex">` en su `<head>`, que es la forma
+  correcta de excluirlas del índice sin impedir que Google las rastree.
+- **`sitemap.xml`** solo incluye `index.html` (las páginas legales son
+  `noindex`, por lo que no deben aparecer en el sitemap).
+- **Datos estructurados**: `index.html` incluye un bloque `application/ld+json`
+  tipo `MedicalBusiness` con datos de contacto — actualiza el campo
+  `address` con la dirección real si aplica.
+- Antes de publicar, actualiza `https://www.sarabernal.co/` en
+  `robots.txt`, `sitemap.xml` y las etiquetas `canonical`/`og:url` de las 3
+  páginas si el dominio final cambia.
 
 ## Google Analytics y consentimiento de cookies
 

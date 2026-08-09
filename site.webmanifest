@@ -1,0 +1,23 @@
+{
+  "name": "Ps. Sara Bernal — Psicóloga Clínica",
+  "short_name": "Sara Bernal",
+  "description": "Terapia con enfoque cognitivo-conductual para ansiedad, depresión, familia, proyecto de vida y violencia de género.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#FAF7F1",
+  "theme_color": "#FAF7F1",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "assets/icons/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

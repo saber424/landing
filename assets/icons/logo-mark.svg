@@ -1,0 +1,43 @@
+<svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Marca de Sara Bernal — Psicóloga Clínica: hoja (crecimiento/bienestar) dentro de una silueta de cabeza de perfil (mente/psicología) -->
+  <defs>
+    <clipPath id="head-clip">
+      <path d="M256 40
+               C 340 40 392 96 400 160
+               C 404 192 396 208 416 224
+               C 430 235 430 252 414 260
+               C 400 267 396 276 396 296
+               C 396 360 388 392 352 420
+               C 332 448 300 445 260 434
+               C 260 434 224 434 194 420
+               C 128 400 88 336 88 264
+               C 88 140 168 40 256 40 Z" />
+    </clipPath>
+  </defs>
+
+  <!-- Fondo circular asimétrico (mismo lenguaje visual que el resto del sitio) -->
+  <rect x="0" y="0" width="512" height="512" rx="140" ry="180" fill="#2B3A2F" />
+
+  <!-- Silueta de cabeza de perfil, en el tono cálido del papel -->
+  <path d="M256 90
+           C 322 90 364 134 370 184
+           C 373 208 367 220 382 232
+           C 393 240 393 253 381 259
+           C 370 264 367 271 367 286
+           C 367 334 361 358 333 380
+           C 318 402 296 400 265 392
+           C 265 392 240 392 220 384
+           C 178 368 152 324 152 268
+           C 152 172 196 90 256 90 Z"
+        fill="#FAF7F1" />
+
+  <!-- Hoja (crecimiento / bienestar), recortada dentro de la silueta de la cabeza -->
+  <g clip-path="url(#head-clip)">
+    <g transform="translate(256 250) rotate(-18)">
+      <path d="M0 -108 C -64 -108 -64 40 0 108 C 64 40 64 -108 0 -108 Z" fill="#BE7355" />
+      <path d="M0 -84 L 0 92" stroke="#2B3A2F" stroke-width="9" stroke-linecap="round" />
+      <path d="M-30 -20 C -14 -10 0 0 0 0" stroke="#2B3A2F" stroke-width="7" stroke-linecap="round" fill="none" />
+      <path d="M30 30 C 14 38 0 46 0 46" stroke="#2B3A2F" stroke-width="7" stroke-linecap="round" fill="none" />
+    </g>
+  </g>
+</svg>
