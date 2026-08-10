@@ -160,43 +160,7 @@
     <p class="eyebrow">Agenda</p>
     <h2 class="section-title">Reserva tu sesión</h2>
 
-    <div class="agenda__tabs" role="tablist" aria-label="Tipo de cita">
-      <button type="button" class="agenda__tab is-active" role="tab" aria-selected="true" data-audience="primera">Primera vez</button>
-      <button type="button" class="agenda__tab" role="tab" aria-selected="false" data-audience="paciente">Ya soy paciente</button>
-    </div>
-
     <div class="agenda__grid">
-      <div class="agenda__info" data-audience-panel="primera">
-        <ul class="agenda-info-list">
-          <li>
-            <strong>Duración:</strong> 50 minutos (30 min en primera cita gratuita)
-          </li>
-          <li>
-            <strong>Modalidad:</strong> Online (videollamada) o presencial en consultorio
-          </li>
-          <li>
-            <strong>Qué incluye tu primera cita:</strong> un espacio para contarme tu
-            situación, definir objetivos juntas y resolver cualquier duda sobre el proceso.
-          </li>
-        </ul>
-      </div>
-
-      <div class="agenda__info" data-audience-panel="paciente" hidden>
-        <ul class="agenda-info-list">
-          <li>
-            <strong>Duración:</strong> 50 minutos
-          </li>
-          <li>
-            <strong>Modalidad:</strong> Online (videollamada) o presencial en consultorio
-          </li>
-          <li>
-            <strong>Qué incluye tu sesión de seguimiento:</strong> continuamos tu proceso
-            donde lo dejamos, con el mismo enfoque terapéutico. Si hay algo puntual que
-            quieras trabajar esta vez, cuéntamelo al confirmar el horario.
-          </li>
-        </ul>
-      </div>
-
       <div class="agenda__scheduler">
         <h3 class="agenda__scheduler-title">Elige un horario disponible</h3>
         <!--
@@ -220,7 +184,22 @@
           <button type="button" class="time-slot">Vie 12:00</button>
         </div>
         <p class="agenda__selected" id="agendaSelected">Selecciona un horario para continuar.</p>
-        <a href="#contacto" class="btn btn--primary btn--full">Confirmar y escribir mensaje</a>
+        <a href="#contacto" class="btn btn--primary btn--full">Confirmar</a>
+      </div>
+
+      <div class="agenda__info">
+        <ul class="agenda-info-list">
+          <li>
+            <strong>Duración:</strong> 50 minutos (30 min en primera cita gratuita)
+          </li>
+          <li>
+            <strong>Modalidad:</strong> Online (videollamada) o presencial en consultorio
+          </li>
+          <li>
+            <strong>Qué incluye tu primera cita:</strong> un espacio para contarme tu
+            situación, definir objetivos juntas y resolver cualquier duda sobre el proceso.
+          </li>
+        </ul>
       </div>
     </div>
   </section>

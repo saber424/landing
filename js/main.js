@@ -8,7 +8,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initMobileDrawer();
   initScrollSpy();
   initTimeSlots();
-  initAgendaTabs();
   initContactForm();
   initCookieConsent();
   const footerYear = document.getElementById("footerYear");
@@ -187,27 +186,5 @@ function initTimeSlots() {
     grid.querySelectorAll(".time-slot").forEach((btn) => btn.classList.remove("active"));
     slot.classList.add("active");
     selectedLabel.textContent = `Horario seleccionado: ${slot.textContent}. Escríbeme para confirmarlo.`;
-  });
-}
-
-/* ---------- Toggle Agenda: primera vez / ya soy paciente ---------- */
-function initAgendaTabs() {
-  const tabs = document.querySelectorAll(".agenda__tab");
-  const panels = document.querySelectorAll("[data-audience-panel]");
-  if (!tabs.length || !panels.length) return;
-
-  tabs.forEach((tab) => {
-    tab.addEventListener("click", () => {
-      const audience = tab.dataset.audience;
-
-      tabs.forEach((t) => {
-        t.classList.toggle("is-active", t === tab);
-        t.setAttribute("aria-selected", t === tab ? "true" : "false");
-      });
-
-      panels.forEach((panel) => {
-        panel.hidden = panel.dataset.audiencePanel !== audience;
-      });
-    });
   });
 }
