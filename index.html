@@ -84,13 +84,13 @@
     <nav class="topbar__nav" aria-label="Navegación principal">
       <ul class="topbar__list">
         <li><a href="#sobre" class="nav-link" data-section="sobre">Sobre mí</a></li>
+        <li><a href="#agenda" class="nav-link" data-section="agenda">Agenda</a></li>
         <li><a href="#inicio" class="nav-link" data-section="inicio">Inicio</a></li>
         <li><a href="#areas" class="nav-link" data-section="areas">Áreas de atención</a></li>
         <li><a href="#tarifas" class="nav-link" data-section="tarifas">Tarifas</a></li>
         <li><a href="#recursos" class="nav-link" data-section="recursos">Recursos</a></li>
         <li><a href="#bienestar" class="nav-link" data-section="bienestar">Bienestar</a></li>
         <li><a href="#contacto" class="nav-link" data-section="contacto">Contacto</a></li>
-        <li><a href="#agenda" class="nav-link" data-section="agenda">Agenda</a></li>
       </ul>
     </nav>
 
@@ -108,13 +108,13 @@
 <nav class="drawer" id="mobileDrawer" aria-label="Menú de navegación móvil">
   <ul class="drawer__list">
     <li><a href="#sobre" class="drawer-link">Sobre mí</a></li>
+    <li><a href="#agenda" class="drawer-link">Agenda</a></li>
     <li><a href="#inicio" class="drawer-link">Inicio</a></li>
     <li><a href="#areas" class="drawer-link">Áreas de atención</a></li>
     <li><a href="#tarifas" class="drawer-link">Tarifas</a></li>
     <li><a href="#recursos" class="drawer-link">Recursos</a></li>
     <li><a href="#bienestar" class="drawer-link">Bienestar</a></li>
     <li><a href="#contacto" class="drawer-link">Contacto</a></li>
-    <li><a href="#agenda" class="drawer-link">Agenda</a></li>
   </ul>
   <a href="#agenda" class="btn btn--primary drawer__cta">Agenda tu sesión</a>
 </nav>
@@ -155,7 +155,56 @@
     </div>
   </section>
 
-  <!-- ============ 2. HERO ============ -->
+  <!-- ============ 2. AGENDA ============ -->
+  <section id="agenda" class="section agenda">
+    <p class="eyebrow">Agenda</p>
+    <h2 class="section-title">Reserva tu sesión</h2>
+
+    <div class="agenda__grid">
+      <div class="agenda__info">
+        <ul class="agenda-info-list">
+          <li>
+            <strong>Duración:</strong> 50 minutos (30 min en primera cita gratuita)
+          </li>
+          <li>
+            <strong>Modalidad:</strong> Online (videollamada) o presencial en consultorio
+          </li>
+          <li>
+            <strong>Qué incluye tu primera cita:</strong> un espacio para contarme tu
+            situación, definir objetivos juntas y resolver cualquier duda sobre el proceso.
+          </li>
+        </ul>
+      </div>
+
+      <div class="agenda__scheduler">
+        <h3 class="agenda__scheduler-title">Elige un horario disponible</h3>
+        <!--
+          Integración futura: reemplazar este bloque por un embed real de
+          Calendly (o similar), ej:
+          <div class="calendly-inline-widget" data-url="https://calendly.com/tu-usuario/primera-sesion"></div>
+          <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        -->
+        <div class="time-grid" id="timeGrid">
+          <button type="button" class="time-slot">Lun 09:00</button>
+          <button type="button" class="time-slot">Lun 10:00</button>
+          <button type="button" class="time-slot">Lun 16:00</button>
+          <button type="button" class="time-slot">Mar 09:00</button>
+          <button type="button" class="time-slot">Mar 11:00</button>
+          <button type="button" class="time-slot">Mar 15:00</button>
+          <button type="button" class="time-slot">Mié 10:00</button>
+          <button type="button" class="time-slot">Mié 14:00</button>
+          <button type="button" class="time-slot">Jue 09:00</button>
+          <button type="button" class="time-slot">Jue 17:00</button>
+          <button type="button" class="time-slot">Vie 10:00</button>
+          <button type="button" class="time-slot">Vie 12:00</button>
+        </div>
+        <p class="agenda__selected" id="agendaSelected">Selecciona un horario para continuar.</p>
+        <a href="#contacto" class="btn btn--primary btn--full">Confirmar y escribir mensaje</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 3. HERO ============ -->
   <section id="inicio" class="section hero">
     <div class="hero__text">
       <p class="eyebrow">Psicóloga clínica · Sara Bernal</p>
@@ -213,7 +262,7 @@
     </div>
   </section>
 
-  <!-- ============ 3. ÁREAS DE ATENCIÓN ============ -->
+  <!-- ============ 4. ÁREAS DE ATENCIÓN ============ -->
   <section id="areas" class="section areas">
     <p class="eyebrow">Áreas de atención</p>
     <h2 class="section-title">Lo que trabajamos juntas</h2>
@@ -277,7 +326,7 @@
     </div>
   </section>
 
-  <!-- ============ 4. TARIFAS ============ -->
+  <!-- ============ 5. TARIFAS ============ -->
   <section id="tarifas" class="section tarifas">
     <p class="eyebrow">Tarifas</p>
     <h2 class="section-title">Invertir en tu bienestar</h2>
@@ -313,7 +362,7 @@
     </div>
   </section>
 
-  <!-- ============ 5. RECURSOS ============ -->
+  <!-- ============ 6. RECURSOS ============ -->
   <section id="recursos" class="section recursos">
     <p class="eyebrow">Recursos</p>
     <h2 class="section-title">Para leer y reflexionar</h2>
@@ -343,7 +392,7 @@
     </div>
   </section>
 
-  <!-- ============ 6. BIENESTAR ============ -->
+  <!-- ============ 7. BIENESTAR ============ -->
   <section id="bienestar" class="section bienestar">
     <div class="bienestar__breathing">
       <p class="eyebrow eyebrow--light">Ejercicio gratuito</p>
@@ -397,7 +446,7 @@
     </div>
   </section>
 
-  <!-- ============ 7. CONTACTO ============ -->
+  <!-- ============ 8. CONTACTO ============ -->
   <section id="contacto" class="section contacto">
     <p class="eyebrow">Contacto</p>
     <h2 class="section-title">¿Es tu primera vez en terapia?</h2>
@@ -474,55 +523,6 @@
     </form>
   </section>
 
-  <!-- ============ 8. AGENDA ============ -->
-  <section id="agenda" class="section agenda">
-    <p class="eyebrow">Agenda</p>
-    <h2 class="section-title">Reserva tu sesión</h2>
-
-    <div class="agenda__grid">
-      <div class="agenda__info">
-        <ul class="agenda-info-list">
-          <li>
-            <strong>Duración:</strong> 50 minutos (30 min en primera cita gratuita)
-          </li>
-          <li>
-            <strong>Modalidad:</strong> Online (videollamada) o presencial en consultorio
-          </li>
-          <li>
-            <strong>Qué incluye tu primera cita:</strong> un espacio para contarme tu
-            situación, definir objetivos juntas y resolver cualquier duda sobre el proceso.
-          </li>
-        </ul>
-      </div>
-
-      <div class="agenda__scheduler">
-        <h3 class="agenda__scheduler-title">Elige un horario disponible</h3>
-        <!--
-          Integración futura: reemplazar este bloque por un embed real de
-          Calendly (o similar), ej:
-          <div class="calendly-inline-widget" data-url="https://calendly.com/tu-usuario/primera-sesion"></div>
-          <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-        -->
-        <div class="time-grid" id="timeGrid">
-          <button type="button" class="time-slot">Lun 09:00</button>
-          <button type="button" class="time-slot">Lun 10:00</button>
-          <button type="button" class="time-slot">Lun 16:00</button>
-          <button type="button" class="time-slot">Mar 09:00</button>
-          <button type="button" class="time-slot">Mar 11:00</button>
-          <button type="button" class="time-slot">Mar 15:00</button>
-          <button type="button" class="time-slot">Mié 10:00</button>
-          <button type="button" class="time-slot">Mié 14:00</button>
-          <button type="button" class="time-slot">Jue 09:00</button>
-          <button type="button" class="time-slot">Jue 17:00</button>
-          <button type="button" class="time-slot">Vie 10:00</button>
-          <button type="button" class="time-slot">Vie 12:00</button>
-        </div>
-        <p class="agenda__selected" id="agendaSelected">Selecciona un horario para continuar.</p>
-        <a href="#contacto" class="btn btn--primary btn--full">Confirmar y escribir mensaje</a>
-      </div>
-    </div>
-  </section>
-
   <!-- ============ 9. TESTIMONIOS ============ -->
   <section class="section testimonios">
     <p class="eyebrow">Testimonios</p>
@@ -564,13 +564,13 @@
 
   <nav class="footer__nav" aria-label="Navegación del footer">
     <a href="#sobre">Sobre mí</a>
+    <a href="#agenda">Agenda</a>
     <a href="#inicio">Inicio</a>
     <a href="#areas">Áreas de atención</a>
     <a href="#tarifas">Tarifas</a>
     <a href="#recursos">Recursos</a>
     <a href="#bienestar">Bienestar</a>
     <a href="#contacto">Contacto</a>
-    <a href="#agenda">Agenda</a>
   </nav>
 
   <div class="footer__contact">
