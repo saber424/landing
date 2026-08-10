@@ -20,7 +20,7 @@ function initHeroRotator() {
   if (!phrases.length) return;
 
   let current = 0;
-  const INTERVAL = 3400;
+  const INTERVAL = 5500;
 
   setInterval(() => {
     phrases[current].classList.remove("is-active");
