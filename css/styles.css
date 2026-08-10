@@ -918,6 +918,37 @@ em {
 
 /* ============ Agenda ============ */
 
+.agenda__tabs {
+  display: inline-flex;
+  gap: 0.5rem;
+  background: var(--paper-2);
+  padding: 0.35rem;
+  border-radius: 100px;
+  margin-bottom: 2.5rem;
+}
+
+.agenda__tab {
+  border: none;
+  background: transparent;
+  color: var(--ink-soft);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.6rem 1.25rem;
+  border-radius: 100px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.agenda__tab:hover {
+  color: var(--ink);
+}
+
+.agenda__tab.is-active {
+  background: var(--ink);
+  color: var(--white);
+}
+
 .agenda__grid {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
