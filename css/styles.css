@@ -218,6 +218,17 @@ em {
   display: block;
 }
 
+.topbar__brand-text {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--clay);
+  margin-left: 0.75rem;
+  white-space: nowrap;
+}
+
 .topbar__brand-dot {
   color: var(--clay);
 }
@@ -1402,6 +1413,10 @@ em {
 @media (max-width: 700px) {
   .section {
     padding: 3.5rem 6vw;
+  }
+
+  .topbar__brand-text {
+    display: none;
   }
 
   .cards-grid--areas,
