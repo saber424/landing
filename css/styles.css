@@ -3,18 +3,18 @@
    ============================================= */
 
 :root {
-  --ink: #2B3A2F;
-  --ink-soft: #4A5A4E;
-  --paper: #FAF7F1;
-  --paper-2: #F1ECE1;
-  --clay: #BE7355;
-  --gold: #B8912E;
-  --sage: #8FA085;
-  --sage-light: #DDE4D6;
+  --ink: #3B4632;
+  --ink-soft: #5B6350;
+  --paper: #F8F3E9;
+  --paper-2: #EFE8D8;
+  --clay: #BD7A5C;
+  --gold: #B08A3E;
+  --sage: #8B8A66;
+  --sage-light: #E4DFC8;
 
   --white: #FFFFFF;
-  --shadow: 0 20px 40px -20px rgba(43, 58, 47, 0.25);
-  --shadow-sm: 0 8px 20px -12px rgba(43, 58, 47, 0.25);
+  --shadow: 0 20px 40px -20px rgba(59, 70, 50, 0.25);
+  --shadow-sm: 0 8px 20px -12px rgba(59, 70, 50, 0.25);
 
   --font-serif: "Fraunces", Georgia, serif;
   --font-sans: "Work Sans", -apple-system, BlinkMacSystemFont, sans-serif;
