@@ -4,7 +4,6 @@
    ============================================= */
 
 document.addEventListener("DOMContentLoaded", () => {
-  initHeroRotator();
   initMobileDrawer();
   initScrollSpy();
   initTimeSlots();
@@ -13,21 +12,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const footerYear = document.getElementById("footerYear");
   if (footerYear) footerYear.textContent = new Date().getFullYear();
 });
-
-/* ---------- 1. Rotación automática del headline del hero ---------- */
-function initHeroRotator() {
-  const phrases = document.querySelectorAll(".hero__phrase");
-  if (!phrases.length) return;
-
-  let current = 0;
-  const INTERVAL = 5500;
-
-  setInterval(() => {
-    phrases[current].classList.remove("is-active");
-    current = (current + 1) % phrases.length;
-    phrases[current].classList.add("is-active");
-  }, INTERVAL);
-}
 
 /* ---------- 2. Menú mobile: drawer + overlay ---------- */
 function initMobileDrawer() {
