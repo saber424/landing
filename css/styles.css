@@ -792,6 +792,68 @@ em {
   font-size: 0.9rem;
 }
 
+/* ============ Franja de confianza ============ */
+
+.trust-strip {
+  background: var(--ink);
+  max-width: none;
+  padding: 2.75rem 4vw;
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.trust-strip__item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-right: 2.5rem;
+  border-right: 1px solid rgba(248, 243, 233, 0.15);
+  flex: 1;
+  min-width: 0;
+}
+
+.trust-strip__item:last-of-type {
+  border-right: none;
+}
+
+.trust-strip__icon {
+  width: 30px;
+  height: 30px;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.trust-strip__item div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+}
+
+.trust-strip__item strong {
+  font-family: var(--font-serif);
+  color: var(--paper);
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+.trust-strip__item span {
+  color: var(--sage-light);
+  font-size: 0.85rem;
+}
+
+.trust-strip__deco {
+  position: absolute;
+  right: -10px;
+  bottom: -10px;
+  width: 130px;
+  height: 130px;
+  color: rgba(228, 223, 200, 0.25);
+  pointer-events: none;
+}
+
 /* ============ Bienestar ============ */
 
 .bienestar {
@@ -1317,6 +1379,22 @@ em {
 
   .bienestar {
     grid-template-columns: 1fr;
+  }
+
+  .trust-strip {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .trust-strip__item {
+    padding-right: 0;
+    border-right: none;
+    width: 100%;
+  }
+
+  .trust-strip__deco {
+    display: none;
   }
 
   .agenda__grid {
