@@ -47,9 +47,17 @@ function initMobileDrawer() {
 
 /* ---------- 3. Scroll-spy para el menú superior ---------- */
 function initScrollSpy() {
-  const sections = document.querySelectorAll(".main .section[id]");
   const links = document.querySelectorAll(".nav-link");
-  if (!sections.length || !links.length) return;
+  if (!links.length) return;
+
+  // Solo observamos las secciones que tienen link en el menú: si se
+  // observaran todas (incluyendo Inicio, Agenda, etc., que no están en
+  // el menú), su intersección "limpiaría" el resaltado al no encontrar
+  // ningún link coincidente.
+  const sections = Array.from(links)
+    .map((link) => document.getElementById(link.dataset.section))
+    .filter(Boolean);
+  if (!sections.length) return;
 
   const setActive = (id) => {
     links.forEach((link) => {
