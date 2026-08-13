@@ -374,7 +374,6 @@ em {
   gap: 3rem;
   align-items: start;
   padding-top: 5rem;
-  max-width: none;
 }
 
 .hero__headline {
