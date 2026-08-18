@@ -521,6 +521,13 @@
       <!-- Honeypot anti-spam: debe quedar oculto y vacío -->
       <input type="checkbox" name="botcheck" class="honeypot" tabindex="-1" autocomplete="off">
 
+      <!-- Se llena solo si el paciente eligió un horario en la sección Agenda -->
+      <input type="hidden" name="horario_seleccionado" id="horarioSeleccionadoInput" value="">
+      <div class="schedule-note" id="scheduleNote" hidden>
+        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="10" width="36" height="28" rx="4"/><path d="M6 16h36M16 22h16M16 28h10"/></svg>
+        <span>Horario que elegiste: <strong id="scheduleNoteValue"></strong></span>
+      </div>
+
       <div class="form-row">
         <div class="form-group">
           <label for="nombre">Nombre</label>
@@ -535,7 +542,7 @@
       <div class="form-row">
         <div class="form-group">
           <label for="correo">Correo electrónico</label>
-          <input type="email" id="correo" name="correo" required autocomplete="email">
+          <input type="email" id="correo" name="email" required autocomplete="email">
         </div>
         <div class="form-group">
           <label for="telefono">Teléfono</label>

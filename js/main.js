@@ -105,9 +105,11 @@ function initContactForm() {
       const result = await response.json();
 
       if (response.ok && result.success) {
-        status.textContent = "¡Listo! Tu mensaje fue enviado. Te responderé pronto.";
+        status.textContent = "¡Gracias por escribirme! 💛 Ya recibí tu mensaje y te voy a responder muy pronto para coordinar todo.";
         status.classList.add("form-status--success");
         form.reset();
+        const scheduleNote = document.getElementById("scheduleNote");
+        if (scheduleNote) scheduleNote.hidden = true;
       } else {
         throw new Error(result.message || "No se pudo enviar el mensaje.");
       }
@@ -165,11 +167,18 @@ function initCookieConsent() {
   }
 }
 
-/* ---------- 6. Selección de horario en Agenda (solo UI) ---------- */
+/* ---------- 6. Selección de horario en Agenda ---------- */
 function initTimeSlots() {
   const grid = document.getElementById("timeGrid");
   const selectedLabel = document.getElementById("agendaSelected");
   if (!grid || !selectedLabel) return;
+
+  // Estos elementos viven en el formulario de Contacto: al elegir un
+  // horario aquí, queda guardado ahí (campo oculto que se envía con el
+  // formulario + aviso visible para que el paciente confirme su elección).
+  const horarioInput = document.getElementById("horarioSeleccionadoInput");
+  const scheduleNote = document.getElementById("scheduleNote");
+  const scheduleNoteValue = document.getElementById("scheduleNoteValue");
 
   grid.addEventListener("click", (event) => {
     const slot = event.target.closest(".time-slot");
@@ -178,5 +187,9 @@ function initTimeSlots() {
     grid.querySelectorAll(".time-slot").forEach((btn) => btn.classList.remove("active"));
     slot.classList.add("active");
     selectedLabel.textContent = `Horario seleccionado: ${slot.textContent}. Escríbeme para confirmarlo.`;
+
+    if (horarioInput) horarioInput.value = slot.textContent;
+    if (scheduleNoteValue) scheduleNoteValue.textContent = slot.textContent;
+    if (scheduleNote) scheduleNote.hidden = false;
   });
 }
