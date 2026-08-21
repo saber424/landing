@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<script>window.GA_MEASUREMENT_ID = "G-95TRTV0KR3";</script>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Autoevaluación de ansiedad — Sara Bernal</title>
+<meta name="description" content="Un cuestionario breve para entender cómo está tu nivel de ansiedad hoy. No reemplaza un diagnóstico, pero te da una fotografía honesta de dónde estás parado/a.">
+<meta name="theme-color" content="#F8F3E9">
+<link rel="canonical" href="https://www.sarabernal.co/autoevaluacion-ansiedad.html">
+
+<!-- Favicon -->
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar__inner">
+    <a href="index.html" class="topbar__brand"><img src="assets/icons/android-chrome-192x192.png" alt="Sara Bernal — Psicóloga clínica" class="topbar__brand-img"></a>
+    <a href="index.html#recursos" class="btn btn--ghost btn--small">← Volver a Recursos</a>
+  </div>
+</header>
+
+<main class="main">
+  <section class="section guide-content">
+    <p class="eyebrow">Autoevaluación</p>
+    <h1 class="section-title">Autoevaluación de ansiedad</h1>
+    <p class="guide-intro">
+      Un cuestionario breve para entender cómo está tu nivel de ansiedad hoy. No reemplaza un
+      diagnóstico, pero te da una fotografía honesta de dónde estás parado/a.
+    </p>
+
+    <div class="guide-callout">
+      <strong>¿Cómo responder?</strong> Piensa en las últimas dos semanas. Marca la casilla que
+      mejor describa qué tan seguido te ha pasado cada situación. Sé honesto/a contigo, no hay
+      respuestas buenas o malas.
+    </div>
+
+    <form id="quizForm">
+      <div style="overflow-x: auto;">
+        <table class="quiz-table">
+          <thead>
+            <tr>
+              <th>En las últimas 2 semanas...</th>
+              <th>Nunca (0)</th>
+              <th>A veces (1)</th>
+              <th>Frecuente (2)</th>
+              <th>Casi siempre (3)</th>
+            </tr>
+          </thead>
+          <tbody id="quizBody">
+            <!-- Las filas se generan con JS a partir de la lista de preguntas -->
+          </tbody>
+        </table>
+      </div>
+
+      <button type="submit" class="btn btn--primary btn--lg">Calcular mi puntaje</button>
+    </form>
+
+    <div class="quiz-result" id="quizResult" hidden>
+      <p class="quiz-result__score">Puntaje: <span id="quizScore">0</span> / 30</p>
+      <p class="quiz-result__label" id="quizLabel"></p>
+      <p id="quizText"></p>
+    </div>
+
+    <table class="score-table">
+      <thead>
+        <tr><th>Rango</th><th>Nivel</th><th>Qué significa</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>0–7</td>
+          <td>Nivel leve</td>
+          <td>Tu ansiedad está dentro de un rango manejable. Vale la pena seguir prestando atención a lo que te genera tensión y sostener hábitos que te regulen (sueño, pausas, movimiento).</td>
+        </tr>
+        <tr>
+          <td>8–15</td>
+          <td>Nivel moderado</td>
+          <td>Hay señales claras de que la ansiedad está tomando espacio en tu día a día. Este es un buen momento para hablarlo con un profesional antes de que se intensifique.</td>
+        </tr>
+        <tr>
+          <td>16–23</td>
+          <td>Nivel alto</td>
+          <td>Tu cuerpo y tu mente están sosteniendo mucho. Es momento de buscar acompañamiento profesional para entender qué lo está generando y trabajar en herramientas concretas.</td>
+        </tr>
+        <tr>
+          <td>24–30</td>
+          <td>Nivel muy alto</td>
+          <td>Estás cargando un nivel de ansiedad que probablemente ya está afectando tu descanso, tus relaciones o tu funcionamiento diario. Te recomiendo buscar apoyo profesional lo antes posible.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="guide-closing">
+      <p>
+        Un número no te dice toda la historia, pero sí te da una señal honesta de dónde estás.
+        Si tu resultado te generó ruido, inquietud o quieres entender mejor qué hay detrás,
+        agenda tu primera sesión conmigo y lo conversamos con calma.
+      </p>
+      <a href="index.html#agenda" class="btn btn--primary btn--lg">Agenda tu primera sesión</a>
+    </div>
+
+    <p class="guide-disclaimer">
+      Este cuestionario es una herramienta de autoconocimiento y no constituye un diagnóstico
+      clínico. Si sientes que tu bienestar está en riesgo, busca ayuda profesional de inmediato.
+    </p>
+  </section>
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__brand">
+      <img src="assets/icons/logo-full.png" alt="Sara Bernal — Terapeuta, Psicología Clínica" class="footer__logo-img" width="640" height="598">
+    </div>
+
+    <nav class="footer__nav" aria-label="Navegación del footer">
+      <a href="index.html#inicio">Inicio</a>
+      <a href="index.html#terapia">Terapia</a>
+      <a href="index.html#sobre">Sobre mí</a>
+      <a href="index.html#tarifas">Tarifas</a>
+      <a href="index.html#agenda">Agenda</a>
+      <a href="index.html#recursos">Recursos</a>
+      <a href="index.html#contacto">Contacto</a>
+    </nav>
+
+    <div class="footer__contact">
+      <p>psicologa.sarabernalrestrepo@gmail.com</p>
+      <p>Instagram · LinkedIn</p>
+    </div>
+
+    <p class="footer__legal">
+      Toda la información compartida en este sitio y en sesión está protegida por el
+      secreto profesional. © <span id="footerYear"></span> Sara Bernal. Todos los derechos reservados.
+      <br>
+      <a href="terminos.html">Términos y condiciones</a> ·
+      <a href="privacidad.html">Política de tratamiento de datos</a> ·
+      <button type="button" class="footer__cookie-link" id="openCookiePrefs">Preferencias de cookies</button>
+    </p>
+  </div>
+</footer>
+
+<!-- ============ COOKIE CONSENT BANNER ============ -->
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Preferencias de cookies" hidden>
+  <div class="cookie-banner__text">
+    <p>
+      Usamos cookies analíticas (Google Analytics) para entender cómo se usa este sitio.
+      No activamos estas cookies hasta que las aceptes. Puedes leer más en nuestra
+      <a href="privacidad.html">Política de tratamiento de datos</a>.
+    </p>
+  </div>
+  <div class="cookie-banner__actions">
+    <button type="button" class="btn btn--outline btn--small" id="cookieReject">Rechazar</button>
+    <button type="button" class="btn btn--primary btn--small" id="cookieAccept">Aceptar cookies</button>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+<script>
+  // Cuestionario de autoevaluación: solo funciona en esta página (no
+  // se guarda en ningún servidor, es un cálculo hecho en el navegador).
+  (function () {
+    var preguntas = [
+      "Me he sentido nervioso/a, ansioso/a o «al límite»",
+      "No he podido dejar de preocuparme o controlar mis pensamientos",
+      "Me ha costado relajarme, incluso en momentos de calma",
+      "He sentido tensión física (mandíbula, hombros, estómago)",
+      "He tenido problemas para dormir por pensamientos que no paran",
+      "Me he sentido irritable o con el ánimo cambiante sin razón clara",
+      "He evitado situaciones o personas por miedo a sentirme mal",
+      "He anticipado que algo malo va a pasar sin motivo concreto",
+      "Me ha costado concentrarme en tareas simples del día a día",
+      "He sentido que mi cuerpo está «en alerta» sin poder bajar el ritmo"
+    ];
+
+    var body = document.getElementById("quizBody");
+    if (!body) return;
+
+    preguntas.forEach(function (texto, i) {
+      var tr = document.createElement("tr");
+      var celdaPregunta = "<td>" + (i + 1) + ". " + texto + "</td>";
+      var celdasOpciones = [0, 1, 2, 3].map(function (valor) {
+        return '<td><input type="radio" name="p' + i + '" value="' + valor + '" required></td>';
+      }).join("");
+      tr.innerHTML = celdaPregunta + celdasOpciones;
+      body.appendChild(tr);
+    });
+
+    var form = document.getElementById("quizForm");
+    var resultBox = document.getElementById("quizResult");
+    var scoreEl = document.getElementById("quizScore");
+    var labelEl = document.getElementById("quizLabel");
+    var textEl = document.getElementById("quizText");
+
+    var rangos = [
+      { max: 7, label: "Nivel leve", texto: "Tu ansiedad está dentro de un rango manejable. Vale la pena seguir prestando atención a lo que te genera tensión y sostener hábitos que te regulen (sueño, pausas, movimiento)." },
+      { max: 15, label: "Nivel moderado", texto: "Hay señales claras de que la ansiedad está tomando espacio en tu día a día. Este es un buen momento para hablarlo con un profesional antes de que se intensifique." },
+      { max: 23, label: "Nivel alto", texto: "Tu cuerpo y tu mente están sosteniendo mucho. Es momento de buscar acompañamiento profesional para entender qué lo está generando y trabajar en herramientas concretas." },
+      { max: 30, label: "Nivel muy alto", texto: "Estás cargando un nivel de ansiedad que probablemente ya está afectando tu descanso, tus relaciones o tu funcionamiento diario. Te recomiendo buscar apoyo profesional lo antes posible." }
+    ];
+
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+      var total = 0;
+      preguntas.forEach(function (_, i) {
+        var seleccionado = form.querySelector('input[name="p' + i + '"]:checked');
+        total += seleccionado ? parseInt(seleccionado.value, 10) : 0;
+      });
+
+      var rango = rangos.find(function (r) { return total <= r.max; }) || rangos[rangos.length - 1];
+
+      scoreEl.textContent = total;
+      labelEl.textContent = rango.label;
+      textEl.textContent = rango.texto;
+      resultBox.hidden = false;
+      resultBox.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+  })();
+</script>
+</body>
+</html>

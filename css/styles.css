@@ -1284,6 +1284,260 @@ em {
   color: var(--ink);
 }
 
+/* ============ Páginas de guías/recursos ============ */
+
+.guide-content {
+  max-width: 760px;
+}
+
+.guide-intro {
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+  margin: 0 0 2rem;
+}
+
+.guide-callout {
+  background: var(--sage-light);
+  border-radius: 16px 16px 16px 4px;
+  padding: 1.25rem 1.5rem;
+  margin-bottom: 2.5rem;
+  color: var(--ink);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.guide-callout strong {
+  color: var(--ink);
+}
+
+.technique-card {
+  background: var(--paper-2);
+  border-radius: 20px 20px 20px 6px;
+  padding: 1.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.technique-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.4rem;
+}
+
+.technique-card__label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--clay);
+}
+
+.technique-card__tag {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  background: var(--white);
+  color: var(--ink-soft);
+  padding: 0.3rem 0.75rem;
+  border-radius: 100px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.technique-card__title {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0 0 0.4rem;
+}
+
+.technique-card__context {
+  font-style: italic;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  margin: 0 0 0.9rem;
+}
+
+.technique-card__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-left: 1.1rem;
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.guide-closing {
+  background: var(--ink);
+  color: var(--paper);
+  border-radius: 20px 20px 20px 90px;
+  padding: 2rem 2.25rem;
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.guide-closing p {
+  color: var(--sage-light);
+  margin: 0 0 1.25rem;
+  font-size: 0.98rem;
+}
+
+.guide-disclaimer {
+  font-size: 0.8rem;
+  color: var(--ink-soft);
+  font-style: italic;
+  margin-top: 1.5rem;
+  line-height: 1.6;
+}
+
+/* Tabla de autoevaluación */
+
+.quiz-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0 1rem;
+  font-size: 0.92rem;
+}
+
+.quiz-table th,
+.quiz-table td {
+  padding: 0.75rem 0.5rem;
+  border-bottom: 1px solid rgba(43, 58, 47, 0.1);
+  text-align: center;
+}
+
+.quiz-table th:first-child,
+.quiz-table td:first-child {
+  text-align: left;
+  color: var(--ink);
+}
+
+.quiz-table th {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
+.quiz-table input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--clay);
+}
+
+.quiz-result {
+  background: var(--paper-2);
+  border-radius: 16px 16px 16px 4px;
+  padding: 1.25rem 1.5rem;
+  margin: 1.5rem 0 2rem;
+  font-size: 0.95rem;
+}
+
+.quiz-result__score {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--clay);
+  margin: 0 0 0.4rem;
+}
+
+.quiz-result__label {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.score-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0 2rem;
+  font-size: 0.9rem;
+}
+
+.score-table th,
+.score-table td {
+  padding: 0.7rem 0.6rem;
+  border-bottom: 1px solid rgba(43, 58, 47, 0.1);
+  text-align: left;
+  vertical-align: top;
+}
+
+.score-table th {
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  color: var(--ink-soft);
+  font-weight: 600;
+}
+
+.score-table td:first-child {
+  color: var(--clay);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.score-table td:nth-child(2) {
+  color: var(--ink);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.score-table td:last-child {
+  color: var(--ink-soft);
+}
+
+/* Journaling */
+
+.journal-question {
+  margin-bottom: 1.75rem;
+}
+
+.journal-question__number {
+  font-family: var(--font-serif);
+  color: var(--clay);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.journal-question__text {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-style: italic;
+  margin: 0.3rem 0 0.75rem;
+}
+
+.journal-question textarea {
+  width: 100%;
+  border: 1px solid rgba(43, 58, 47, 0.2);
+  border-radius: 12px 12px 12px 4px;
+  padding: 0.85rem 1rem;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--ink);
+  background: var(--white);
+  resize: vertical;
+}
+
+.journal-question textarea:focus {
+  outline: 2px solid var(--sage);
+  outline-offset: 1px;
+}
+
+@media (max-width: 700px) {
+  .technique-card__header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.4rem;
+  }
+
+  .quiz-table {
+    font-size: 0.8rem;
+  }
+}
+
 /* ============ Cookie consent banner ============ */
 
 .cookie-banner {
