@@ -140,18 +140,15 @@ necesidad de backend propio.
    de éxito o error sin recargar la página. Incluye un campo `botcheck`
    oculto como protección anti-spam (no lo elimines).
 
-## Integrar un sistema de agendamiento real
+## Sistema de agendamiento (Calendly)
 
-La sección **Agenda** (`#agenda`) incluye actualmente un selector de
-horarios solo de interfaz (JavaScript vanilla, sin backend). Hay un
-comentario en `index.html` marcando el punto exacto donde se debería
-integrar un widget real, por ejemplo un embed de
-[Calendly](https://calendly.com):
-
-```html
-<div class="calendly-inline-widget" data-url="https://calendly.com/tu-usuario/primera-sesion"></div>
-<script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-```
+La sección **Agenda** (`#agenda`) tiene un embed real de
+[Calendly](https://calendly.com) (`.calendly-inline-widget` en
+`index.html`), apuntando al evento de 30 minutos de Sara. Para
+cambiar el evento o el usuario de Calendly, edita el `data-url` de
+ese div. Si en algún momento se agrega un tipo de evento distinto
+(por ejemplo, para sesiones pagas de 50 minutos), se puede duplicar
+ese bloque o cambiar el enlace según el flujo que se necesite.
 
 ## Datos placeholder pendientes de reemplazar
 

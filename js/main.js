@@ -6,7 +6,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   initMobileDrawer();
   initScrollSpy();
-  initTimeSlots();
   initContactForm();
   initCookieConsent();
   const footerYear = document.getElementById("footerYear");
@@ -114,8 +113,6 @@ function initContactForm() {
         status.textContent = "¡Gracias por escribirme! 💛 Ya recibí tu mensaje y te voy a responder muy pronto para coordinar todo.";
         status.classList.add("form-status--success");
         form.reset();
-        const scheduleNote = document.getElementById("scheduleNote");
-        if (scheduleNote) scheduleNote.hidden = true;
       } else {
         throw new Error(result.message || "No se pudo enviar el mensaje.");
       }
@@ -171,31 +168,4 @@ function initCookieConsent() {
   if (openPrefsBtn) {
     openPrefsBtn.addEventListener("click", showBanner);
   }
-}
-
-/* ---------- 6. Selección de horario en Agenda ---------- */
-function initTimeSlots() {
-  const grid = document.getElementById("timeGrid");
-  const selectedLabel = document.getElementById("agendaSelected");
-  if (!grid || !selectedLabel) return;
-
-  // Estos elementos viven en el formulario de Contacto: al elegir un
-  // horario aquí, queda guardado ahí (campo oculto que se envía con el
-  // formulario + aviso visible para que el paciente confirme su elección).
-  const horarioInput = document.getElementById("horarioSeleccionadoInput");
-  const scheduleNote = document.getElementById("scheduleNote");
-  const scheduleNoteValue = document.getElementById("scheduleNoteValue");
-
-  grid.addEventListener("click", (event) => {
-    const slot = event.target.closest(".time-slot");
-    if (!slot) return;
-
-    grid.querySelectorAll(".time-slot").forEach((btn) => btn.classList.remove("active"));
-    slot.classList.add("active");
-    selectedLabel.textContent = `Horario seleccionado: ${slot.textContent}. Escríbeme para confirmarlo.`;
-
-    if (horarioInput) horarioInput.value = slot.textContent;
-    if (scheduleNoteValue) scheduleNoteValue.textContent = slot.textContent;
-    if (scheduleNote) scheduleNote.hidden = false;
-  });
 }

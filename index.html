@@ -383,35 +383,15 @@
 
     <div class="agenda__grid">
       <div class="agenda__scheduler">
-        <h3 class="agenda__scheduler-title">Elige un horario disponible</h3>
-        <!--
-          Integración futura: reemplazar este bloque por un embed real de
-          Calendly (o similar), ej:
-          <div class="calendly-inline-widget" data-url="https://calendly.com/tu-usuario/primera-sesion"></div>
-          <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
-        -->
-        <div class="time-grid" id="timeGrid">
-          <button type="button" class="time-slot">Lun 09:00</button>
-          <button type="button" class="time-slot">Lun 10:00</button>
-          <button type="button" class="time-slot">Lun 16:00</button>
-          <button type="button" class="time-slot">Mar 09:00</button>
-          <button type="button" class="time-slot">Mar 11:00</button>
-          <button type="button" class="time-slot">Mar 15:00</button>
-          <button type="button" class="time-slot">Mié 10:00</button>
-          <button type="button" class="time-slot">Mié 14:00</button>
-          <button type="button" class="time-slot">Jue 09:00</button>
-          <button type="button" class="time-slot">Jue 17:00</button>
-          <button type="button" class="time-slot">Vie 10:00</button>
-          <button type="button" class="time-slot">Vie 12:00</button>
-        </div>
-        <p class="agenda__selected" id="agendaSelected">Selecciona un horario para continuar.</p>
-        <a href="#contacto" class="btn btn--primary btn--full">Confirmar</a>
+        <h3 class="agenda__scheduler-title">Reserva tu horario</h3>
+        <div class="calendly-inline-widget" data-url="https://calendly.com/psico-sarabernalrestrepo/30min" style="min-width:280px;height:700px;"></div>
+        <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
       </div>
 
       <div class="agenda__info">
         <ul class="agenda-info-list">
           <li>
-            <strong>Duración:</strong> 50 minutos (30 min en primera cita gratuita)
+            <strong>Duración:</strong> 30 minutos (primera conversación gratuita)
           </li>
           <li>
             <strong>Modalidad:</strong> Online (videollamada)
@@ -520,13 +500,6 @@
       <input type="hidden" name="from_name" value="Formulario de contacto — sitio web">
       <!-- Honeypot anti-spam: debe quedar oculto y vacío -->
       <input type="checkbox" name="botcheck" class="honeypot" tabindex="-1" autocomplete="off">
-
-      <!-- Se llena solo si el paciente eligió un horario en la sección Agenda -->
-      <input type="hidden" name="horario_seleccionado" id="horarioSeleccionadoInput" value="">
-      <div class="schedule-note" id="scheduleNote" hidden>
-        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="10" width="36" height="28" rx="4"/><path d="M6 16h36M16 22h16M16 28h10"/></svg>
-        <span>Horario que elegiste: <strong id="scheduleNoteValue"></strong></span>
-      </div>
 
       <div class="form-row">
         <div class="form-group">
