@@ -532,10 +532,14 @@ em {
   color: var(--sage);
 }
 
-/* ============ Lo que puedes esperar ============ */
+/* ============ Lo que puedes esperar (dentro de Sobre mí) ============ */
 
-.esperar {
+.sobre__expect {
+  grid-column: 1 / -1;
   text-align: center;
+  margin-top: 3.5rem;
+  padding-top: 3rem;
+  border-top: 1px solid rgba(59, 70, 50, 0.12);
 }
 
 .expect-card {
