@@ -466,14 +466,25 @@ em {
 
 /* ============ Área cards ============ */
 
+.areas {
+  text-align: center;
+}
+
+.areas .section-lead {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .area-card {
   background: var(--white);
   border: 1px solid rgba(43, 58, 47, 0.08);
-  border-radius: 24px 24px 24px 90px;
-  padding: 2rem 1.85rem;
+  border-radius: 20px 20px 20px 60px;
+  padding: 1.5rem 1.35rem;
   display: flex;
   flex-direction: column;
-  gap: 0.9rem;
+  align-items: center;
+  text-align: center;
+  gap: 0.6rem;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -483,9 +494,9 @@ em {
 }
 
 .area-card__icon {
-  width: 56px;
-  height: 56px;
-  border-radius: 16px 16px 16px 4px;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px 12px 12px 4px;
   background: var(--paper-2);
   display: flex;
   align-items: center;
@@ -493,26 +504,26 @@ em {
 }
 
 .area-card__icon svg {
-  width: 28px;
-  height: 28px;
+  width: 22px;
+  height: 22px;
   color: var(--clay);
 }
 
 .area-card__title {
-  font-size: 1.2rem;
+  font-size: 1.05rem;
   font-weight: 500;
 }
 
 .area-card__desc {
   color: var(--ink-soft);
-  font-size: 0.95rem;
+  font-size: 0.88rem;
   flex: 1;
 }
 
 .area-card__link {
   color: var(--clay);
   font-weight: 600;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
 }
 
 .area-card--protective {
