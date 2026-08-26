@@ -672,11 +672,12 @@ em {
 }
 
 .sobre__features {
+  grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.75rem;
-  margin-top: 1.75rem;
-  padding-top: 1.5rem;
+  margin-top: 0.5rem;
+  padding-top: 1.25rem;
   border-top: 1px solid rgba(59, 70, 50, 0.12);
 }
 
@@ -1558,6 +1559,10 @@ em {
 
   .sobre {
     grid-template-columns: 1fr;
+  }
+
+  .sobre__features {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .sobre__media {
