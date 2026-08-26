@@ -457,13 +457,6 @@ em {
   grid-template-columns: repeat(3, 1fr);
 }
 
-.cards-grid--testimonios {
-  grid-template-columns: repeat(2, 1fr);
-  max-width: 900px;
-  margin: 0 auto;
-  gap: 3rem;
-}
-
 /* ============ Área cards ============ */
 
 .areas {
@@ -1009,35 +1002,6 @@ em {
 .calendly-inline-widget {
   border-radius: 16px;
   overflow: hidden;
-}
-
-/* ============ Testimonios ============ */
-
-.testimonios {
-  text-align: center;
-}
-
-.testimonial-card {
-  padding: 0 1rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1.25rem;
-  text-align: center;
-}
-
-.testimonial-card__quote {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: 1.3rem;
-  color: var(--ink);
-  margin: 0;
-}
-
-.testimonial-card__author {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--clay);
-  margin: 0;
 }
 
 /* ============ CTA final ============ */
@@ -1620,8 +1584,7 @@ em {
 
   .cards-grid--areas,
   .cards-grid--pricing,
-  .cards-grid--recursos,
-  .cards-grid--testimonios {
+  .cards-grid--recursos {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1647,8 +1610,7 @@ em {
 
   .cards-grid--areas,
   .cards-grid--pricing,
-  .cards-grid--recursos,
-  .cards-grid--testimonios {
+  .cards-grid--recursos {
     grid-template-columns: 1fr;
   }
 
