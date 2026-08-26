@@ -218,6 +218,38 @@ em {
   display: block;
 }
 
+.topbar__brand-word {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.2;
+  margin-left: 0.85rem;
+}
+
+.topbar__brand-name {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  color: var(--ink);
+}
+
+.topbar__brand-role {
+  font-family: var(--font-sans);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+  margin-top: 0.2rem;
+}
+
+.topbar__brand-script {
+  font-family: var(--font-script);
+  font-size: 1rem;
+  color: var(--clay);
+  margin-top: -0.05rem;
+}
+
 .topbar__brand-dot {
   color: var(--clay);
 }
@@ -1602,6 +1634,10 @@ em {
   .topbar__brand-img {
     height: 68px;
     width: 68px;
+  }
+
+  .topbar__brand-word {
+    display: none;
   }
 
   .section {
