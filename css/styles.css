@@ -197,7 +197,7 @@ em {
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
-  padding: 1rem 4vw;
+  padding: 0.5rem 4vw;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -213,8 +213,8 @@ em {
 }
 
 .topbar__brand-img {
-  height: 44px;
-  width: 44px;
+  height: 84px;
+  width: 84px;
   display: block;
 }
 
@@ -226,6 +226,11 @@ em {
   flex: 1;
   min-width: 0;
   overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.topbar__nav::-webkit-scrollbar {
+  display: none;
 }
 
 .topbar__list {
@@ -233,6 +238,7 @@ em {
   align-items: center;
   gap: 0.25rem;
   white-space: nowrap;
+  width: max-content;
 }
 
 .nav-link {
@@ -1622,6 +1628,16 @@ em {
 }
 
 @media (max-width: 700px) {
+  .topbar__inner {
+    padding-top: 0.55rem;
+    padding-bottom: 0.55rem;
+  }
+
+  .topbar__brand-img {
+    height: 68px;
+    width: 68px;
+  }
+
   .section {
     padding: 3.5rem 6vw;
   }

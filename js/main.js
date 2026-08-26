@@ -49,19 +49,15 @@ function initScrollSpy() {
   const links = document.querySelectorAll(".nav-link");
   if (!links.length) return;
 
-  // Observamos las secciones que tienen link en el menú, más "inicio":
-  // si se observaran TODAS las secciones (incluyendo Agenda, etc., que
-  // no están en el menú), su intersección "limpiaría" el resaltado al
-  // no encontrar ningún link coincidente al pasar por ellas. Pero
-  // "inicio" sí hace falta observarlo: al estar arriba del todo, la
-  // sección siguiente (Terapia) puede asomar dentro del área de
-  // detección antes de tiempo — observar "inicio" permite limpiar el
-  // resaltado mientras seguís viendo el Hero.
+  // Observamos solo las secciones que tienen link en el menú. Así las
+  // secciones sin enlace no limpian el resaltado al pasar por ellas.
   const inicio = document.getElementById("inicio");
-  const sections = [
-    inicio,
-    ...Array.from(links).map((link) => document.getElementById(link.dataset.section)),
-  ].filter(Boolean);
+  const sections = Array.from(
+    new Set([
+      inicio,
+      ...Array.from(links).map((link) => document.getElementById(link.dataset.section)),
+    ])
+  ).filter(Boolean);
   if (!sections.length) return;
 
   const setActive = (id) => {
