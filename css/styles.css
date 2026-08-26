@@ -464,10 +464,6 @@ em {
   gap: 3rem;
 }
 
-.cards-grid--esperar {
-  grid-template-columns: repeat(4, 1fr);
-}
-
 /* ============ Área cards ============ */
 
 .area-card {
@@ -530,63 +526,6 @@ em {
 
 .area-card--protective .area-card__icon svg {
   color: var(--sage);
-}
-
-/* ============ Lo que puedes esperar (dentro de Sobre mí) ============ */
-
-.sobre__expect {
-  grid-column: 1 / -1;
-  text-align: center;
-  margin-top: 3.5rem;
-  padding-top: 3rem;
-  border-top: 1px solid rgba(59, 70, 50, 0.12);
-}
-
-.expect-card {
-  background: var(--paper-2);
-  border-radius: 20px;
-  padding: 2.25rem 1.5rem 2rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.expect-card__icon {
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  border: 1.5px solid rgba(59, 70, 50, 0.25);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1rem;
-}
-
-.expect-card__icon svg {
-  width: 28px;
-  height: 28px;
-  color: var(--ink);
-}
-
-.expect-card__number {
-  font-size: 0.75rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  color: var(--ink-soft);
-  margin-bottom: 0.5rem;
-}
-
-.expect-card__title {
-  font-family: var(--font-serif);
-  font-size: 1.15rem;
-  font-weight: 500;
-  margin-bottom: 0.5rem;
-}
-
-.expect-card__desc {
-  font-size: 0.9rem;
-  color: var(--ink-soft);
 }
 
 .area-card__link--protective {
@@ -1621,8 +1560,7 @@ em {
   .cards-grid--areas,
   .cards-grid--pricing,
   .cards-grid--recursos,
-  .cards-grid--testimonios,
-  .cards-grid--esperar {
+  .cards-grid--testimonios {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -1649,8 +1587,7 @@ em {
   .cards-grid--areas,
   .cards-grid--pricing,
   .cards-grid--recursos,
-  .cards-grid--testimonios,
-  .cards-grid--esperar {
+  .cards-grid--testimonios {
     grid-template-columns: 1fr;
   }
 
