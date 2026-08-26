@@ -642,9 +642,10 @@ em {
 }
 
 .sobre__meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.75rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 1.75rem;
+  row-gap: 1.1rem;
   margin-top: 1.75rem;
   padding-top: 1.5rem;
   border-top: 1px solid rgba(59, 70, 50, 0.12);
@@ -1592,6 +1593,10 @@ em {
   }
 
   .steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sobre__meta {
     grid-template-columns: 1fr;
   }
 
