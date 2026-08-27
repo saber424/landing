@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initMobileDrawer();
   initScrollSpy();
   initContactForm();
+  initContactToggle();
   initCookieConsent();
   const footerYear = document.getElementById("footerYear");
   if (footerYear) footerYear.textContent = new Date().getFullYear();
@@ -119,6 +120,24 @@ function initContactForm() {
       submitBtn.disabled = false;
     }
   });
+}
+
+/* ---------- Formulario de Contacto colapsado ---------- */
+function initContactToggle() {
+  const toggle = document.getElementById("contactToggle");
+  if (!toggle) return;
+
+  // Si alguien llega directo a #contacto (ej. el link "Escribir en
+  // privado" de Violencia de género, o el botón "Confirmar" de Agenda),
+  // abrimos el formulario automáticamente en vez de dejarlo colapsado.
+  const openIfLinked = () => {
+    if (window.location.hash === "#contacto") {
+      toggle.open = true;
+    }
+  };
+
+  openIfLinked();
+  window.addEventListener("hashchange", openIfLinked);
 }
 
 /* ---------- 5. Consentimiento de cookies (Google Analytics) ---------- */

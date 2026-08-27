@@ -419,26 +419,38 @@
       cuando estén listos.
     -->
     <div class="cards-grid cards-grid--recursos">
-      <article class="resource-card">
-        <span class="resource-card__tag">Journaling</span>
-        <h3 class="resource-card__title">Preguntas para escribir sobre lo que sientes</h3>
-        <p class="resource-card__desc">Preguntas guiadas para escribir sobre lo que sientes, sin filtro.</p>
-        <a href="journaling-preguntas.html" class="resource-card__link">Empezar →</a>
-      </article>
+      <details class="resource-card">
+        <summary class="resource-card__summary">
+          <span class="resource-card__tag">Journaling</span>
+          <h3 class="resource-card__title">Preguntas para escribir sobre lo que sientes</h3>
+        </summary>
+        <div class="resource-card__body">
+          <p class="resource-card__desc">Preguntas guiadas para escribir sobre lo que sientes, sin filtro.</p>
+          <a href="journaling-preguntas.html" class="resource-card__link">Empezar →</a>
+        </div>
+      </details>
 
-      <article class="resource-card">
-        <span class="resource-card__tag">Autoevaluación</span>
-        <h3 class="resource-card__title">¿Cómo está tu nivel de ansiedad hoy?</h3>
-        <p class="resource-card__desc">Un cuestionario breve para entender cómo está tu nivel de ansiedad hoy.</p>
-        <a href="autoevaluacion-ansiedad.html" class="resource-card__link">Hacer el test →</a>
-      </article>
+      <details class="resource-card">
+        <summary class="resource-card__summary">
+          <span class="resource-card__tag">Autoevaluación</span>
+          <h3 class="resource-card__title">¿Cómo está tu nivel de ansiedad hoy?</h3>
+        </summary>
+        <div class="resource-card__body">
+          <p class="resource-card__desc">Un cuestionario breve para entender cómo está tu nivel de ansiedad hoy.</p>
+          <a href="autoevaluacion-ansiedad.html" class="resource-card__link">Hacer el test →</a>
+        </div>
+      </details>
 
-      <article class="resource-card">
-        <span class="resource-card__tag">Guía descargable</span>
-        <h3 class="resource-card__title">Estrategias para el manejo del estrés</h3>
-        <p class="resource-card__desc">6 técnicas prácticas para regular tu sistema nervioso, para llevar contigo donde quieras.</p>
-        <a href="guia-manejo-estres.html" class="resource-card__link">Ver guía →</a>
-      </article>
+      <details class="resource-card">
+        <summary class="resource-card__summary">
+          <span class="resource-card__tag">Guía descargable</span>
+          <h3 class="resource-card__title">Estrategias para el manejo del estrés</h3>
+        </summary>
+        <div class="resource-card__body">
+          <p class="resource-card__desc">6 técnicas prácticas para regular tu sistema nervioso, para llevar contigo donde quieras.</p>
+          <a href="guia-manejo-estres.html" class="resource-card__link">Ver guía →</a>
+        </div>
+      </details>
     </div>
   </section>
 
@@ -448,8 +460,11 @@
     <h2 class="section-title">¿Es tu primera vez en terapia?</h2>
     <p class="section-lead">Cuéntame un poco de ti. No necesitas tener todo claro, con lo que puedas escribir es suficiente.</p>
 
-    <!-- Web3Forms: reemplaza el value de access_key por tu key real (la consigues gratis en https://web3forms.com) -->
-    <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+    <details class="contact-toggle" id="contactToggle">
+      <summary class="contact-toggle__summary">Escríbeme →</summary>
+
+      <!-- Web3Forms: reemplaza el value de access_key por tu key real (la consigues gratis en https://web3forms.com) -->
+      <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
       <input type="hidden" name="access_key" value="1e2f6f35-79ff-4d63-a807-5a7cf0794298">
       <input type="hidden" name="subject" value="Nuevo mensaje desde la web — Sara Bernal">
       <input type="hidden" name="from_name" value="Formulario de contacto — sitio web">
@@ -517,7 +532,8 @@
 
       <button type="submit" class="btn btn--primary btn--lg btn--full">Enviar mensaje</button>
       <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-    </form>
+      </form>
+    </details>
   </section>
 
   <!-- ============ 9. CTA FINAL ============ -->
