@@ -1086,10 +1086,8 @@ em {
   padding: 2rem;
 }
 
-.agenda__scheduler-title {
-  font-size: 1.1rem;
-  font-weight: 500;
-  margin-bottom: 1.25rem;
+.agenda-toggle[open] .contact-toggle__summary {
+  margin-bottom: 1.5rem;
 }
 
 .calendly-inline-widget {

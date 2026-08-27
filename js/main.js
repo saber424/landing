@@ -122,18 +122,25 @@ function initContactForm() {
   });
 }
 
-/* ---------- Formulario de Contacto colapsado ---------- */
+/* ---------- Bloques colapsados que se abren solos si llegan enlazados ---------- */
 function initContactToggle() {
-  const toggle = document.getElementById("contactToggle");
-  if (!toggle) return;
+  // Contacto y Agenda quedan colapsados por defecto para ahorrar
+  // espacio, pero si alguien llega directo con ese hash (ej. el botón
+  // "Agendar sesión" del menú, el link "Escribir en privado" de
+  // Violencia de género, o el "Confirmar" de Agenda) los abrimos
+  // automáticamente en vez de dejarlos ocultos.
+  const toggles = [
+    { id: "contactToggle", hash: "#contacto" },
+    { id: "agendaToggle", hash: "#agenda" },
+  ];
 
-  // Si alguien llega directo a #contacto (ej. el link "Escribir en
-  // privado" de Violencia de género, o el botón "Confirmar" de Agenda),
-  // abrimos el formulario automáticamente en vez de dejarlo colapsado.
   const openIfLinked = () => {
-    if (window.location.hash === "#contacto") {
-      toggle.open = true;
-    }
+    toggles.forEach(({ id, hash }) => {
+      const el = document.getElementById(id);
+      if (el && window.location.hash === hash) {
+        el.open = true;
+      }
+    });
   };
 
   openIfLinked();
